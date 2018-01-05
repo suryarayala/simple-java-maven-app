@@ -14,7 +14,7 @@ pipeline {
             post {
                 success  {
                     emailext  (
-                to: "letstrydvops@gmail.com",
+                to: "rayalasurya.339@gmail.com",
                 subject: "Job was Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 body: """=== Job Details as Below === 
                   Job Name = '${env.JOB_NAME}'
@@ -25,7 +25,7 @@ pipeline {
                 }
                 failure  {
                     emailext  (
-                to: "letstrydvops@gmail.com",
+                to: "rayalasurya.339@gmail.com",
                 subject: "Job Failed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 body: """=== Job Details as Below === 
                   Job Name = '${env.JOB_NAME}'
