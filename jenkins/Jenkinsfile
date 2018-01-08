@@ -58,11 +58,6 @@ pipeline {
                
             }
         }
-        post { 
-        success { 
-            echo 'fuck'
-        }
-    }
         stage('Store-in-S3 2') {
             steps {
                 sh "aws s3 cp /var/lib/jenkins/workspace/test/target/my-app-1.0-SNAPSHOT.jar s3://${params.buc}/"
