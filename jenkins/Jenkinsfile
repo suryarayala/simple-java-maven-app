@@ -19,8 +19,9 @@ pipeline {
                 body: """=== Job Details as Below === 
                   Job Name = '${env.JOB_NAME}'
                   Job Build Number = '${env.BUILD_NUMBER}'
-                  Build Info @ '${env.BUILD_URL}' 
+                  Build Info @ '${env.BUILD_URL}'
                      """
+                 )
                 }
                 failure  {
                     emailext  (
