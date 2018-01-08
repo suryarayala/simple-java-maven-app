@@ -55,11 +55,13 @@ pipeline {
         stage('Store-in-S3') {
             steps {
                 sh "aws s3 cp /var/lib/jenkins/workspace/test/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Name}/"
+               }
+           }
+         stage('Store-in-S3') {
+            steps {
                 sh "aws s3 cp /var/lib/jenkins/workspace/test/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Name}/"
-             
-                
-                
-            }
-        }
+               }
+           }        
+        
     }
 }
