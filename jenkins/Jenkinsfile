@@ -1,5 +1,5 @@
-properties([parameters([string(name: 'Bucket_Name', defaultValue: 'kops-state-a2345' )])])
-properties([parameters([string(name: 'Bucket_Name', defaultValue: 'kops-state-a23456' )])])
+properties([parameters([string(name: 'Bucket_Name', defaultValue: 'kops-state-a2345'),string(name: 'Bucket_Name', defaultValue: 'kops-state-a23456' )])])
+
 pipeline {
     agent {
         docker {
