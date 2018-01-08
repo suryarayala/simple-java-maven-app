@@ -56,7 +56,7 @@ pipeline {
             steps {
                 sh "aws s3 cp /var/lib/jenkins/workspace/test/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Name}/"
                  echo 'test'
-        input "This is a question?"
+        input "do you want to proceed?"
             }
         }
         stage('Store-in-S3 2') {
