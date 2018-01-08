@@ -1,4 +1,4 @@
-properties([parameters([string(name: 'Bucket_Name', defaultValue: 'kops-state-a2345')],[string(name: 'Bucket_Name', defaultValue: 'kops-state-a23456')])])
+properties([parameters([string(name: 'Bucket_Name', defaultValue: 'kops-state-a2345')],[string(name: 'Bucket_Namea', defaultValue: 'kops-state-a23456')])])
 pipeline {
     agent {
         docker {
@@ -54,7 +54,7 @@ pipeline {
         stage('Store-in-S3') {
             steps {
                 sh "aws s3 cp /var/lib/jenkins/workspace/test/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Name}/"
-                sh "aws s3 cp /var/lib/jenkins/workspace/test/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Name}/"
+                sh "aws s3 cp /var/lib/jenkins/workspace/test/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Namea}/"
              
                 
                 
